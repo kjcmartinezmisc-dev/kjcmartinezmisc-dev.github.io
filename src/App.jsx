@@ -27,7 +27,10 @@ export default function App() {
       (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            e.target.classList.add('on');
+            // Inline styles, not a class: React would wipe a manually added
+            // class the next time it re-renders and rewrites className.
+            e.target.style.opacity = '1';
+            e.target.style.translate = 'none';
             io.unobserve(e.target);
           }
         }
