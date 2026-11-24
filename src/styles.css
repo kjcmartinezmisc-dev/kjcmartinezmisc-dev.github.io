@@ -67,6 +67,14 @@ h2{font-size:clamp(28px,4vw,44px)}
 .body p{margin:0 0 16px;opacity:.9}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tags span{border:1px solid currentColor;border-radius:999px;padding:3px 12px;font-size:13px;opacity:.85}
+.pgroup+.pgroup{margin-top:56px}
+.pgtitle{font-size:clamp(20px,2.6vw,26px)}
+.psub{margin:10px 0 22px}
+.tt{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.status{flex:none;font-size:12px;font-weight:700;background:var(--accent);color:#1B1612;border-radius:999px;padding:2px 9px}
+:root[data-theme="dark"] .item.open .status{background:#1B1612;color:var(--accent)}
+.plinks{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+:root[data-theme="dark"] .item.open .btn:not(.ghost){background:#1B1612;color:var(--accent)}
 .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
 form{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:16px}
 form .btn{justify-self:end;width:170px;justify-content:center;white-space:nowrap}

@@ -68,46 +68,76 @@ export const STACK = [
   },
 ];
 
+// Project groups, rendered in this order. Reorder entries here to swap sections.
+export const PROJECT_GROUPS = [
+  {
+    id: 'ai-automation',
+    title: 'AI automation',
+    sub: 'Workflow prototypes built with n8n and LLMs, tested on mock data.',
+  },
+  {
+    id: 'production',
+    title: 'Production work',
+    sub: 'Systems used by real businesses across local and international markets.',
+  },
+];
+
+// To add a project, append one object here with a `group` matching a
+// PROJECT_GROUPS id above. First link renders as the primary button.
 export const PROJECTS = [
   {
-    "t": "Enterprise Point-of-Sale platform",
-    "tags": [
-      "C#",
-      "WPF",
-      "ASP.NET",
-      "SQL Server",
-      "iOS",
-      "Shopify API"
+    id: 'order-exception-triage',
+    group: 'ai-automation',
+    title: 'AI Order Exception Triage',
+    status: 'Prototype',
+    pitch:
+      'An AI first pass on courier shipping exceptions. It classifies each event, drafts the customer message, and alerts the ops team only when a human needs to act.',
+    details: [
+      'Unclear, missing-data, or suspicious cases are escalated to a person instead of being dropped.',
+      'Ignores instructions hidden in courier messages (prompt-injection handling).',
+      'Every case is written to an audit trail.',
+      'Built and tested on mock courier payloads, not connected to live courier accounts.',
     ],
-    "p": [
-      "A cross-platform POS for Windows and iOS used by retail stores. It takes secure card payments through Australian banking APIs and keeps stock in sync with Shopify.",
-      "Built with MVVM and MVC, with unit tests covering the payment and inventory modules."
-    ]
+    tags: ['n8n', 'Gemini', 'Webhooks', 'Discord', 'Prompt-injection handling'],
+    links: [
+      { label: 'Watch demo', href: 'https://www.loom.com/share/389cbf8599284334b7d6d7430ac2e7c2' },
+      { label: 'View on GitHub', href: 'https://github.com/kjcmartinezmisc-dev/n8n-order-exception-triage' },
+    ],
   },
   {
-    "t": "Pick & Pack warehouse mobile app",
-    "tags": [
-      "Swift",
-      "iOS SDK",
-      "REST APIs",
-      "MVVM"
+    id: 'pos-platform',
+    group: 'production',
+    title: 'Enterprise Point-of-Sale platform',
+    pitch:
+      'A cross-platform POS for Windows and iOS used by retail stores. It takes secure card payments through Australian banking APIs and keeps stock in sync with Shopify.',
+    details: [
+      'Built with MVVM and MVC, with unit tests covering the payment and inventory modules.',
     ],
-    "p": [
-      "A native iOS app for warehouse staff to pick, pack, and dispatch orders. It talks to several courier APIs for live dispatch and tracking.",
-      "Reusable components make it quick to add features and cheap to maintain."
-    ]
+    tags: ['C#', 'WPF', 'ASP.NET', 'SQL Server', 'iOS', 'Shopify API'],
+    links: [],
   },
   {
-    "t": "Multi-carrier shipping integration",
-    "tags": [
-      "ShippIT",
-      "StarShipIT",
-      "REST",
-      "CRON jobs"
+    id: 'pick-pack-app',
+    group: 'production',
+    title: 'Pick & Pack warehouse mobile app',
+    pitch:
+      'A native iOS app for warehouse staff to pick, pack, and dispatch orders. It talks to several courier APIs for live dispatch and tracking.',
+    details: [
+      'Reusable components make it quick to add features and cheap to maintain.',
     ],
-    "p": [
-      "Automated order fulfillment for fashion retail clients by connecting their systems to ShippIT and StarShipIT.",
-      "Scheduled background jobs and event triggers cut out manual logistics work."
-    ]
-  }
+    tags: ['Swift', 'iOS SDK', 'REST APIs', 'MVVM'],
+    links: [],
+  },
+  {
+    id: 'shipping-integration',
+    group: 'production',
+    title: 'Multi-carrier shipping integration',
+    pitch:
+      'Automated order fulfillment for fashion retail clients by connecting their systems to ShippIT and StarShipIT.',
+    details: [
+      'Scheduled background jobs and event triggers cut out manual logistics work.',
+    ],
+    tags: ['ShippIT', 'StarShipIT', 'REST', 'CRON jobs'],
+    links: [],
+  },
 ];
