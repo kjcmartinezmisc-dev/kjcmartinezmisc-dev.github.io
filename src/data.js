@@ -11,7 +11,7 @@ export const logo = (key) => logoFiles[`./assets/logos/${key}.svg`];
 
 // Split so the address isn't sitting in the page source as one plain string.
 export const EMAIL = ['kjcmartinez.misc', 'gmail.com'].join('@');
-export const GITHUB_URL = 'https://github.com/karlomartinez-eng';
+export const GITHUB_URL = 'https://github.com/kjcmartinezmisc-dev';
 export const LINKEDIN_URL = 'https://linkedin.com/in/karlo-joseph-martinez';
 
 // [name, logoKey, isLearning?]
