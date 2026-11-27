@@ -105,6 +105,25 @@ export const PROJECTS = [
     ],
   },
   {
+    id: 'support-inbox-agent',
+    group: 'ai-automation',
+    title: 'AI Support Inbox Agent',
+    status: 'Prototype',
+    pitch:
+      'An AI first pass on customer support emails. It classifies each message, looks up the order, and drafts a reply for a person to approve before anything is sent.',
+    details: [
+      'Unclear or suspicious emails are escalated to a person instead of being drafted by the AI.',
+      'Ignores instructions hidden in customer emails (prompt-injection handling), and checks in code that the sender matches the order before any order details are shared.',
+      'Every approval decision is written to an audit trail.',
+      'Built and tested on mock emails and mock order data, not connected to a live store or customer inbox.',
+    ],
+    tags: ['n8n', 'Gemini', 'Gmail', 'Discord', 'Human approval', 'Prompt-injection handling'],
+    links: [
+      { label: 'Watch demo', href: 'https://www.loom.com/share/1f6c95af72ba402499467e234c2560b5' },
+      { label: 'View on GitHub', href: 'https://github.com/kjcmartinezmisc-dev/support-inbox-agent' },
+    ],
+  },
+  {
     id: 'pos-platform',
     group: 'production',
     title: 'Enterprise Point-of-Sale platform',
